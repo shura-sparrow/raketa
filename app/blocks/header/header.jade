@@ -1,0 +1,17 @@
+include ../logo/logo
+include ../dark/dark
+include ../title/title
+include ../description/description
+include ../slider/slider
+
+mixin header()
+	.header
+		+logo()
+		.stamp
+
+		.header__title
+			+title()
+				| Дело
+
+		+description()
+

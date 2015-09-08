@@ -1,0 +1,104 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+*/
+$checkbox_x = 0px;
+$checkbox_y = 0px;
+$checkbox_offset_x = 0px;
+$checkbox_offset_y = 0px;
+$checkbox_width = 25px;
+$checkbox_height = 28px;
+$checkbox_total_width = 93px;
+$checkbox_total_height = 64px;
+$checkbox_image = '../images/sprite.png';
+$checkbox = 0px 0px 0px 0px 25px 28px 93px 64px '../images/sprite.png';
+$checkbox__sel_x = 33px;
+$checkbox__sel_y = 0px;
+$checkbox__sel_offset_x = -33px;
+$checkbox__sel_offset_y = 0px;
+$checkbox__sel_width = 24px;
+$checkbox__sel_height = 28px;
+$checkbox__sel_total_width = 93px;
+$checkbox__sel_total_height = 64px;
+$checkbox__sel_image = '../images/sprite.png';
+$checkbox__sel = 33px 0px -33px 0px 24px 28px 93px 64px '../images/sprite.png';
+$radio_x = 65px;
+$radio_y = 0px;
+$radio_offset_x = -65px;
+$radio_offset_y = 0px;
+$radio_width = 28px;
+$radio_height = 28px;
+$radio_total_width = 93px;
+$radio_total_height = 64px;
+$radio_image = '../images/sprite.png';
+$radio = 65px 0px -65px 0px 28px 28px 93px 64px '../images/sprite.png';
+$radio__sel_x = 0px;
+$radio__sel_y = 36px;
+$radio__sel_offset_x = 0px;
+$radio__sel_offset_y = -36px;
+$radio__sel_width = 28px;
+$radio__sel_height = 28px;
+$radio__sel_total_width = 93px;
+$radio__sel_total_height = 64px;
+$radio__sel_image = '../images/sprite.png';
+$radio__sel = 0px 36px 0px -36px 28px 28px 93px 64px '../images/sprite.png';
+$slider-handle_x = 47px;
+$slider-handle_y = 36px;
+$slider-handle_offset_x = -47px;
+$slider-handle_offset_y = -36px;
+$slider-handle_width = 16px;
+$slider-handle_height = 14px;
+$slider-handle_total_width = 93px;
+$slider-handle_total_height = 64px;
+$slider-handle_image = '../images/sprite.png';
+$slider-handle = 47px 36px -47px -36px 16px 14px 93px 64px '../images/sprite.png';
+$stick_x = 36px;
+$stick_y = 36px;
+$stick_offset_x = -36px;
+$stick_offset_y = -36px;
+$stick_width = 3px;
+$stick_height = 23px;
+$stick_total_width = 93px;
+$stick_total_height = 64px;
+$stick_image = '../images/sprite.png';
+$stick = 36px 36px -36px -36px 3px 23px 93px 64px '../images/sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}

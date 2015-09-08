@@ -1,0 +1,80 @@
+[
+  [
+	  {
+		"title": "Методология БЭМ",
+		"got": true
+	  },
+	  {
+		"title": "jQuery",
+		"got": true
+	  },
+	  {
+		"title": "Использую GRUNT",
+		"got": true
+	  },
+	  {
+		"title": "HAML",
+		"got": false
+	  },
+	  {
+		"title": "SASS",
+		"got": true
+	  },
+	  {
+		"title": "LESS",
+		"got": true
+	  },
+	  {
+		"title": "CoffeeScript",
+		"got": false
+	  }
+  ],
+	 [
+	  {
+		"title": "Jade",
+		"got": true
+	  },
+	  {
+		"title": "Stylus",
+		"got": true
+	  },
+	  {
+		"title": "Верстка под Android",
+		"got": true
+	  },
+	  {
+		"title": "Знаю (изучаю) Angular",
+		"got": true
+	  },
+	  {
+		"title": "Верстка под iOS",
+		"got": true
+	  },
+	  {
+		"title": "Верстка под Windows Phone",
+		"got": true
+	  }
+	],
+	[
+	  {
+		"title": "Верстка рассылок",
+		"got": true
+	  },
+	  {
+		"title": "Адаптивная верстка",
+		"got": true
+	  },
+	  {
+		"title": "Использую Dropbox",
+		"got": true
+	  },
+	  {
+		"title": "Использую Gmail",
+		"got": true
+	  },
+	  {
+		"title": "Использую GitHub",
+		"got": true
+	  }
+	]
+]

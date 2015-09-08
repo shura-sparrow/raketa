@@ -1,0 +1,47 @@
+mixin form_inputs(formInputs)
+	.b-form__contacts
+		each item in formInputs
+			label(class='b-form__label')
+				span(class='b-form__title b-form__title--mod')!=item.title
+				span(class='b-form__input-outer')
+					each item_in in item.input
+						if item_in.title
+							span.b-form__input-inner
+								input(type='#{item_in.type}', class='b-form__input b-form__radio', id="#{item_in.id}",  name='#{item_in.name}', value='#{item_in.value}', checked=(typeof item_in.checked!== 'undefined' && item_in.checked === true  ) )
+								label(for='#{item_in.id}', class='b-form__title b-form__radio-title')=item_in.title
+						else
+							input(type='#{item_in.type}' class='b-form__input' name='#{item_in.name}' value='#{item_in.value}')
+
+mixin skills(skills)
+	- counter = 0
+	each group in skills
+		.b-form__column
+			each skill,i in group
+				.b-form__list-item
+					input(type='checkbox',  class='b-form__checkbox', name='skills', id='skill_#{counter}', checked=(skill.got === true))
+					label(for='skill_#{counter}',  class='b-form__title b-form__checkbox-title')=skill.title
+				- counter++
+
+
+
+
+
+mixin form(formInputs)
+	form(action='' class='b-form')
+		+form_inputs(getData('formInputs'))
+		.b-form__skills
+			.b-form__title
+				| Практические навыки
+
+			.b-form__note
+				span(class='b-form__note__star') *
+				| Отметьте только те&nbsp;технологии и&nbsp;типы задач, с&nbsp;которыми вы&nbsp;хорошо знакомы. Отсутствие опыта отнюдь не&nbsp;означает, что у&nbsp;вас меньше шансов стать нашим сотрудником. Это означает, что вы&nbsp;будете получать те&nbsp;задачи, с&nbsp;которыми гарантировано будете справляться.
+
+			.b-form__list
+				+skills(getData('skills'))
+
+		.b-form__title
+			| Уровень владения JavaScript
+		+slider()
+
+

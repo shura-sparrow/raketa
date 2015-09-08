@@ -1,0 +1,70 @@
+[
+	{
+	  "title" : "Полное ФИО",
+	  "input": [
+		{
+		  "name": "name",
+		  "value": "Воробьева Александра Сергеевна",
+		  "type": "text"
+		}
+	  ]
+
+	},
+    {
+	  "title": "Год рождения",
+	  "input": [ {
+		"name": "age",
+		"value": "1985",
+		"type": "text"
+	  	}
+	  ]
+
+  	},
+  	{
+	  "title": "Место жительства",
+	  "input": [
+		{
+		  "name": "city",
+		  "value": "г. Обнинск, Калужская обл.",
+		  "type": "text"
+		}
+	  ]
+  	},
+  	{
+	  "title": "Скайп",
+	  "input": [
+		{
+		  "name": "skype",
+		  "value": "shura_sparrow",
+		  "type": "text"
+		}
+	  ]
+  	},
+	{
+	  "title": "Почта",
+	  "input": [{
+		  "name": "email",
+		  "value": "shura.sparrow@gmail.com",
+		  "type": "text"
+		}]
+	},
+	{
+	  "title": "Выпускник <a href='http://htmlacademy.ru'>htmlacademy.ru</a>",
+	  "input": [{
+		"name": "htmlacademy",
+		"value": "0",
+		"type": "radio",
+		"title": "Да",
+		"id": "htmlacademy_yes",
+		"checked": true
+	  },
+		{
+		  "name": "htmlacademy",
+		  "value": "1",
+		  "type": "radio",
+		  "title": "Нет",
+		  "id": "htmlacademy_no"
+		}
+	  ]
+	}
+]
